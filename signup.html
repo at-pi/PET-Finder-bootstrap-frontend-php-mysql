@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+    <!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <style>
+        div.ex1 {
+
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .navbar-brand img {
+
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .navbar-brand h1 {}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="images/logo1.png" alt="logo" /><h3>Pet-FINDER</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="page">
+            <div class="page-in">
+                <div class="header">
+                    <div class="topmenu">
+
+
+
+                    </div>
+                    <!--<img src="images/3.jpg" alt="Book1" width="995" height="378">-->
+                </div>
+
+
+                <br><br><br><br><br><br>
+                <div class="ex1">
+                    <form action="signup.php" name="Form" class="register" method="post">
+                        <h1>Sign-Up</h1>
+                        <br>
+                        <fieldset class="row1">
+                            <div class="row">
+                                &nbsp;&nbsp;
+                                <div class="form-group">
+                                    <input type="text" class="form-control" class="long" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" name="fname" required>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="form-group">
+                                    <input type="text" class="form-control" class="long" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name" name="lname" required>
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <fieldset class="row1">
+                            <div class="row">
+
+                                &nbsp;&nbsp;
+                                <div class="form-group">
+                                    <input type="text" class="form-control" class="long" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" name="email" required>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="form-group">
+                                    <input type="text" class="form-control" class="long" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Postal Code" name="postal" required>
+
+                                </div>
+                            </div>
+                            
+                        </fieldset>
+                        <div class="grid-col grid-col_1/2@minLg">
+                            <pfdc-dispatcher-select actions="[&quot;ui.registrationModal.countryIsNotListed&quot;]" non-value-actions="[&quot;ui.registrationModal.countryIsListed&quot;]" dispatch-on-value="[&quot;not-listed&quot;]">
+                                <pfdc-country-select on-change="registration-modal.country.change" class="select" allow-event-propagation="">
+                                    <label pf-select-label="" for="Registration_Modal_user_registration_country" class="select-label" style="">Region</label>
+                                    <select id="Registration_Modal_user_registration_country" pf-select-select="" class="select-select" name="user_registration[address][country]" required="" aria-describedby="Registration_Modal_user_registration_Error_Description">
+            <option value="">
+                Choose region
+            </option>
+        
+
+            <option value="US">
+                Vellore
+            </option>
+        
+
+            <option value="CA">
+                Chennai
+            </option>
+        
+
+            <option value="GU">
+                Bangalore
+            </option>
+        
+
+            <option value="" disabled="">
+                -------------------
+            </option>
+        
+
+            <option value="not-listed">
+                Area not listed?
+            </option>
+        </select>
+                                    <div pf-form-error-label="" id="Registration_Modal_user_registration_country_Error_Description" class="txt txt_error m-txt_alignRight"></div>
+                                </pfdc-country-select>
+                            </pfdc-dispatcher-select>
+                            <pf-element activate-on="ui.registrationModal.countryIsNotListed" deactivate-on="ui.registrationModal.countryIsListed" data-inactive-class="u-isHidden" class="u-isHidden" alert-text-content="">
+                                <div class="u-vrTop2x">
+                                </div>
+                            </pf-element>
+                        </div>
+
+                    
+                    <div class="row">
+
+                                &nbsp;&nbsp;
+                                <div class="form-group">
+                                    <input type="password" class="form-control" class="long" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password" name="pass" required>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="form-group">
+                                    <input type="password" class="form-control" class="long" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirm Password" name="name" required>
+
+                                </div>
+                            </div>
+                    <button type="submit" class="btn btn-outline-dark">Register NOW &raquo;</button>
+                    </form>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">&copy;Designed for HCI project</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+                </nav>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
