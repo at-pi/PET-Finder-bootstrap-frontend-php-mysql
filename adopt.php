@@ -8,13 +8,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$upload_image=$_FILES[" myimage "][ "name" ];
+$one = $_POST["collar"];
+	$two = $_POST["breed"];
+$three = $_POST["size"];
+$four = $_POST["gender"];
+$five = $_POST["stray"];
+$imagetmp=addslashes(file_get_contents($_FILES['myimage']['tmp_name']));
+$sql="insert into found values('$one','$two','$three','$four','$five','$imagetmp')";
+$result=$conn->query($sql);
 
-$folder="/images/";
+	$_SESSION["logged_in"] = "1";
+    echo '<h1>sucessfully submitted</h1>';
+	header("Location: home.php");
 
-move_uploaded_file($_FILES[" myimage "][" tmp_name "], "$folder".$_FILES[" myimage "][" name "]);
-
-$insert_path="INSERT INTO image_table VALUES('$folder','$upload_image')";
-
-$var=mysql_query($inser_path);
 ?>
