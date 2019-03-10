@@ -2,7 +2,7 @@
 A simple website to find lost pets and get information about pets you're planning to have
 
 ***INTRODUCTION***
-Pet-Finder is the web project which is developed in the fomr of a website. The website uses the siple php-mysql combination for it's working. languages used HTML-CSS-Bootstrap-PHP-MYsql-Javascript-Jquery.
+Pet-Finder is the web project which is developed in the form of a website. The website uses the simple php-mysql combination for it's working. languages used HTML-CSS-Bootstrap-PHP-MYsql-Javascript-Jquery.
 ******
 
 ***Software-Requirements***
